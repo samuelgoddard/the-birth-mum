@@ -1,0 +1,10 @@
+{
+  "name": "The Birth Mum",
+  "description": "Do you want to take control of your birth and feel calm, supported and confident? The Birth Mum is a complete birth education course that provides you with",
+  "previewImage": "https://www.datocms-assets.com/205/1605198221-screenshot2020-11-12-next-js-blog-example-with-datocms-1.jpg?crop=top&fit=crop&h=500&w=600&auto=format",
+  "datocmsProjectId": "41438",
+  "deploymentType": "static",
+  "buildCommand": "npm run build",
+  "datocmsApiTokenEnvName": "NEXT_EXAMPLE_CMS_DATOCMS_API_TOKEN",
+  "livePreviewUrl": "https://nextjs-demo-bay.vercel.app/"
+}
