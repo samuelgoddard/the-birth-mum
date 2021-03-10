@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 export default function Header() {
   return (
-    <header className="py-6 md:py-10">
+    <header className="py-6 md:py-10 xl:pb-16">
       <Container>
         <div className="flex flex-wrap items-center">
           <div className="w-24 lg:w-32">

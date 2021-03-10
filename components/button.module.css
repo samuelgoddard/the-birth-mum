@@ -1,5 +1,11 @@
 .btn {
-  @apply bg-green text-white px-5 py-3 uppercase tracking-wide rounded-full text-sm border-2 border-green;
+  @apply bg-green text-white px-4 py-2 uppercase tracking-wide rounded-full text-sm border-2 border-green;
+}
+
+@screen md {
+  .btn {
+    @apply px-5 py-3;
+  } 
 }
 
 .btn:hover, .btn:focus {
@@ -7,7 +13,7 @@
 }
 
 .btn--secondary {
-  @apply border-4 border-green bg-transparent text-green;
+  @apply border-2 border-green bg-transparent text-green;
 }
 
 .btn--secondary:hover, .btn--secondary:focus {

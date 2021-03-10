@@ -2,8 +2,11 @@ import Head from "next/head";
 import { renderMetaTags, useQuerySubscription } from "react-datocms";
 import Hero from "../components/hero";
 import Layout from "../components/layout";
+import Footer from '../components/footer'
 import { request } from "../lib/datocms";
 import { metaTagsFragment, responsiveImageFragment } from "../lib/fragments";
+import { motion } from "framer-motion"
+import { fade } from "../helpers/transitionHelper"
 
 export default function Index({ subscription }) {
   const {
@@ -16,13 +19,23 @@ export default function Index({ subscription }) {
     <>
       <Layout>
         <Head>{renderMetaTags(metaTags)}</Head>
-        
-        <Hero
-          subHeading={home.heroSubHeading}
-          heading={home.heroHeading}
-          text={home.heroText}
-          image={home.heroImage}
-        />
+
+        <motion.div
+          initial="initial"
+          animate="enter"
+          exit="exit"
+        >  
+          <motion.div variants={fade}>
+            <Hero
+              subHeading={home.heroSubHeading}
+              heading={home.heroHeading}
+              text={home.heroText}
+              image={home.heroImage}
+            />
+
+            <Footer />
+          </motion.div>
+        </motion.div>
       </Layout>
     </>
   );
