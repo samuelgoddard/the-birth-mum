@@ -6,6 +6,7 @@ import Values from '../components/values'
 import Layout from "../components/layout";
 import Container from '../components/container'
 import AboutExcerpt from "../components/about-excerpt";
+import Cards from "../components/cards";
 import Footer from '../components/footer'
 import { request } from "../lib/datocms";
 import { metaTagsFragment, responsiveImageFragment } from "../lib/fragments";
@@ -16,7 +17,7 @@ import { Image } from 'react-datocms'
 
 export default function Index({ subscription }) {
   const {
-    data: { home, site },
+    data: { global, home, site },
   } = useQuerySubscription(subscription);
 
   const metaTags = home.seo.concat(site.favicon);
@@ -72,9 +73,11 @@ export default function Index({ subscription }) {
               </Container>
             </div>
 
-            <Values />
+            <Values values={global.values} />
 
             <AboutExcerpt />
+
+            <Cards cards={global.cards} />
 
             <Footer />
 
@@ -115,8 +118,22 @@ export async function getStaticProps() {
             }
           }
         }
+        global {
+          values {
+            heading
+            text
+          }
+          cards {
+            cardTitle
+            cardImage {
+              responsiveImage(imgixParams: {fm: jpg, fit: crop, w: 600, h: 425 }) {
+                ...responsiveImageFragment
+              }
+            }
+            cardUrl
+          }
+        }
       }
-
       ${metaTagsFragment}
       ${responsiveImageFragment}
     `

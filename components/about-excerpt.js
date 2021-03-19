@@ -3,7 +3,7 @@ import Container from '../components/container'
 export default function AboutExcerpt({}) {
     return(
         <Container>
-            <div className="flex flex-wrap items-center mb-8">
+            <div className="flex flex-wrap items-center">
 
             <p className="px-4 mb-4 text-3xl leading-snug md:w-1/2 font-display xs:text-4xl sm:text-5xl xl:text-6xl 2xl:text-7xl 2xl:leading-tight">Hypnotherapy classes in Nottingham.</p>
 
