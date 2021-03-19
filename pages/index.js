@@ -8,11 +8,11 @@ import Buckets from "../components/buckets";
 import Values from '../components/values'
 import Container from '../components/container'
 import AboutExcerpt from "../components/about-excerpt";
-import Cards from "../components/cards";
 import Footer from '../components/footer'
 import { Image } from 'react-datocms'
 import { motion } from "framer-motion"
 import { fade } from "../helpers/transitionHelper"
+import Card from "../components/card";
 
 
 export default function Index({ subscription }) {
@@ -78,8 +78,20 @@ export default function Index({ subscription }) {
             <Values values={global.values} />
 
             <AboutExcerpt />
-
-            <Cards cards={global.cards} />
+            
+            <Container>
+              <div className="flex flex-wrap my-32">
+                {global.cards.map((card, i) => {
+                  return(
+                    <Card
+                      url={card.cardUrl}
+                      image={card.cardImage}
+                      title={card.cardTitle}
+                    />
+                  )
+                })}
+              </div>
+            </Container>
 
             <Footer />
 

@@ -11,7 +11,7 @@ export default function Header() {
           <div className="w-24 lg:w-48">
             <Link href="/">
               <a>
-                <img src="logo.svg" alt="The Birth Mum Logo" className="w-full" />
+                <img src="/logo.svg" alt="The Birth Mum Logo" className="w-full" />
               </a>
             </Link>
           </div>
@@ -21,6 +21,7 @@ export default function Header() {
           </button>
 
           <div className="hidden w-full text-right md:block md:flex-1">
+            
             <Link href="/"><a aria-label="Navigate to Home" className="text-xs tracking-widest uppercase lg:text-sm hover:underline focus:underline md:mx-3 lg:mx-5 lg:ml-5">Home</a></Link>
             
             <Link href="/about"><a aria-label="Navigate to About" className="text-xs tracking-widest uppercase lg:text-sm hover:underline focus:underline md:mx-3 lg:mx-5">About</a></Link>
@@ -31,8 +32,7 @@ export default function Header() {
             
             <Link href="/blog"><a aria-label="Navigate to The Blog" className="text-xs tracking-widest uppercase lg:text-sm hover:underline focus:underline md:mx-3 lg:mx-5">The Blog</a></Link>
 
-            
-              <Button link="/contact" aria-label="Navigate to Contact" classes="md:mx-3 lg:mx-5 lg:mr-5">Get In Touch</Button>
+            <Button link="/contact" aria-label="Navigate to Contact" classes="md:mx-3 lg:mx-5 lg:mr-5">Get In Touch</Button>
             
           </div>
         </div>

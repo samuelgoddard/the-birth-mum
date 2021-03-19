@@ -9,7 +9,7 @@ export default function Footer() {
           <div className="w-1/2 mb-4 md:w-1/4 md:mb-0">
             <Link href="/">
               <a>
-                <img src="logo.svg" alt="The Birth Mum Logo" className="w-20 md:w-24" />
+                <img src="/logo.svg" alt="The Birth Mum Logo" className="w-20 md:w-24" />
               </a>
             </Link>
           </div>
