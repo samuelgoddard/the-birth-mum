@@ -1,5 +1,5 @@
 .btn {
-  @apply inline-flex items-center px-6 py-3 mb-4 text-sm tracking-widest text-white uppercase border-2 rounded-full bg-green border-green;
+  @apply inline-flex items-center px-6 py-3 text-sm tracking-widest text-white uppercase border-2 rounded-full bg-green border-green;
 }
 
 .btn:hover, .btn:focus {

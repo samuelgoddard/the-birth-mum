@@ -1,13 +1,17 @@
 import Head from "next/head";
 import { renderMetaTags, useQuerySubscription } from "react-datocms";
 import Hero from "../components/hero";
-import Bucket from "../components/bucket";
+import Buckets from "../components/buckets";
+import Values from '../components/values'
 import Layout from "../components/layout";
 import Footer from '../components/footer'
 import { request } from "../lib/datocms";
 import { metaTagsFragment, responsiveImageFragment } from "../lib/fragments";
 import { motion } from "framer-motion"
 import { fade } from "../helpers/transitionHelper"
+import Container from '../components/container'
+
+import { Image } from 'react-datocms'
 
 export default function Index({ subscription }) {
   const {
@@ -34,33 +38,40 @@ export default function Index({ subscription }) {
               image={home.heroImage}
             />
 
-            <div class="flex justify-center my-12">
-              
-              <Bucket
-                icon="calendar"
-                title="Interested?"
-                text="Check out our course options and upcoming dates!"
-                linkTarget="/courses"
-                linkLabel="View Dates"
-              />
+            <Buckets />
 
-              <Bucket
-                icon="contact"
-                title="Get in touch!"
-                text="We can have a chat and discuss the perfect course for you."
-                linkTarget="/contact"
-                linkLabel="Contact me"
-              />
-
-              <Bucket
-                icon="book"
-                title="Book!"
-                text="Book a TBM course and prepare for a positive birth."
-                linkTarget="/courses"
-                linkLabel="View courses"
-              />
-              
+            <div className="mb-12 md:mb-24">
+              <Container>
+                <div className="flex flex-wrap items-center justify-end lg:pl-32">
+                  <div className="w-full mb-6 md:w-1/2 md:mb-0 md:px-5">
+                    <div className="w-full">
+                      { home.whatWeDoSubheading && (
+                        <span className="block mb-2 text-xl italic leading-none text-green-light font-display md:text-2xl lg:text-3xl xl:text-4xl">{ home.whatWeDoSubheading }</span>
+                      )}
+                      <h2 className="text-4xl leading-none md:text-5xl lg:text-6xl xl:text-7xl">{ home.whatWeDoHeading }</h2>
+                      { home.whatWeDoText && (
+                        <div
+                          className="opacity-75 content lg:text-lg lg:leading-relaxed lg:my-8 lg:w-4/5"
+                          dangerouslySetInnerHTML={{ __html: home.whatWeDoText }}
+                        />
+                      )}                      
+                    </div>
+                  </div>
+                  { home.whatWeDoImage && (
+                    <div className="w-full md:w-1/2 md:px-5">
+                      <div className="p-3 bg-white rounded-lg">
+                        <Image
+                          data={{...home.whatWeDoImage.responsiveImage, alt: `${home.whatWeDoHeading}` }}
+                          className="w-full rounded-lg"
+                        />
+                      </div>
+                    </div>
+                  )}
+                </div>
+              </Container>
             </div>
+
+            <Values />
 
             <Footer />
 
@@ -88,6 +99,14 @@ export async function getStaticProps() {
           heroHeading
           heroText
           heroImage {
+            responsiveImage(imgixParams: {fm: jpg, fit: crop, w: 1200, h: 850 }) {
+              ...responsiveImageFragment
+            }
+          }
+          whatWeDoSubheading
+          whatWeDoHeading
+          whatWeDoText
+          whatWeDoImage {
             responsiveImage(imgixParams: {fm: jpg, fit: crop, w: 1200, h: 850 }) {
               ...responsiveImageFragment
             }
