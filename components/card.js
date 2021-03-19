@@ -7,7 +7,7 @@ export default function Card({ card }) {
 
             <Link href={`/${card.cardUrl}`}>
 
-                <a className="block p-6 bg-white shadow-lg rounded-2xl md:p-8">
+                <a className="block p-6 transition-all duration-200 bg-white shadow-lg rounded-2xl md:p-8 hover:shadow-xl">
                     <div className="bg-green rounded-t-2xl">
                     <Image
                             data={{...card.cardImage.responsiveImage, alt: `${card.cardTitle}` }}
@@ -15,7 +15,7 @@ export default function Card({ card }) {
                         />
                     </div>
                     
-                    <span className="block mt-4 text-lg tracking-widest text-center uppercase md:mt-6">{card.cardTitle}</span>
+                    <span className="block mt-4 mb-2 text-lg tracking-widest text-center uppercase md:mt-8">{card.cardTitle}</span>
                     
                 </a>
                 

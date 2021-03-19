@@ -1,18 +1,18 @@
 import Head from "next/head";
+import { request } from "../lib/datocms";
+import { metaTagsFragment, responsiveImageFragment } from "../lib/fragments";
 import { renderMetaTags, useQuerySubscription } from "react-datocms";
+import Layout from "../components/layout";
 import Hero from "../components/hero";
 import Buckets from "../components/buckets";
 import Values from '../components/values'
-import Layout from "../components/layout";
 import Container from '../components/container'
 import AboutExcerpt from "../components/about-excerpt";
 import Cards from "../components/cards";
 import Footer from '../components/footer'
-import { request } from "../lib/datocms";
-import { metaTagsFragment, responsiveImageFragment } from "../lib/fragments";
+import { Image } from 'react-datocms'
 import { motion } from "framer-motion"
 import { fade } from "../helpers/transitionHelper"
-import { Image } from 'react-datocms'
 
 
 export default function Index({ subscription }) {
@@ -38,6 +38,7 @@ export default function Index({ subscription }) {
               heading={home.heroHeading}
               text={home.heroText}
               image={home.heroImage}
+              buttons
             />
 
             <Buckets />

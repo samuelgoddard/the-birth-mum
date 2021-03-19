@@ -2,7 +2,7 @@ import Container from './container'
 import { Image } from 'react-datocms'
 import Button from '../components/button'
 
-export default function Hero({ subHeading, heading, text, image}) {
+export default function Hero({ subHeading, heading, text, image, buttons}) {
   return (
     <div className="mb-12 md:mb-24">
       <Container>
@@ -20,10 +20,13 @@ export default function Hero({ subHeading, heading, text, image}) {
                 />
               )}
 
-              <div className="flex flex-wrap justify-between mt-6 xs:justify-start">
-                <Button link="/about" classes="mb-4 sm:mb-0">Find out more</Button>
-                <Button link="/about" secondary classes="xs:ml-4">Get In Touch</Button>
-              </div>
+              {buttons &&
+                <div className="flex flex-wrap justify-between mt-6 xs:justify-start">
+                  <Button link="/about" classes="mb-4 sm:mb-0">Find out more</Button>
+                  <Button link="/about" secondary classes="xs:ml-4">Get In Touch</Button>
+                </div>
+              }
+
             </div>
           </div>
           { image && (
