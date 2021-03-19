@@ -1,6 +1,12 @@
+// If you want to use other PostCSS plugins, see the following:
+// https://tailwindcss.com/docs/using-with-preprocessors
 module.exports = {
-  plugins: [
-    'tailwindcss',
-    'postcss-preset-env',
-  ].filter(x => !!x),
+  plugins: {
+    'postcss-import': {},
+    'tailwindcss': {},
+    'postcss-nested': {
+      unwrap: ['screen'],
+    },
+    'autoprefixer': {},
+  },
 }

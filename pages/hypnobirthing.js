@@ -36,6 +36,7 @@ export default function Hypnobirthing({ subscription }) {
               heading={hypnobirthing.heroHeading}
               text={hypnobirthing.heroText}
               image={hypnobirthing.heroImage}
+              thin
             />
 
             <Values values={global.values} />

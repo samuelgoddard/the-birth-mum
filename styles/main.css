@@ -59,13 +59,13 @@ h2 {
 
 .bucket a {
   @apply relative transition-all duration-200;
-}
 
-.bucket a:after {
-  content: '';
-  @apply absolute bottom-0 w-full h-1 -mb-3 transition-all duration-200 bg-pink;  
-}
+  &:after {
+    content: '';
+    @apply absolute bottom-0 w-full h-1 -mb-3 transition-all duration-200 bg-pink;    
+  }
 
-.bucket a:hover:after {
-  @apply -mb-2;
+  &:hover:after {
+    @apply -mb-2;
+  }
 }

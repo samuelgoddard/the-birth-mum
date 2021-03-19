@@ -39,6 +39,7 @@ export default function Index({ subscription }) {
               text={home.heroText}
               image={home.heroImage}
               buttons
+              thin
             />
 
             <Buckets />
