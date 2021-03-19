@@ -15,28 +15,28 @@ export default function Footer() {
           </div>
 
           <div className="w-1/2 mb-4 md:w-1/4 md:mb-0">
-            <a href="tel:08000000000" className="block mb-1 text-xs lg:text-sm hover:underline focus:underline text-green-light">0800 000 000</a>
-            <a href="mailto:info@gmail.com" className="block mb-1 text-xs lg:text-sm hover:underline focus:underline text-green-light">info@gmail.com</a>
+            <a href="tel:08000000000" className="block mb-1 text-xs sm:mb-2 lg:mb-3 lg:text-base hover:underline focus:underline text-green-light">0800 000 000</a>
+            <a href="mailto:info@gmail.com" className="block mb-1 text-xs sm:mb-2 lg:mb-3 lg:text-base hover:underline focus:underline text-green-light">info@gmail.com</a>
           </div>
 
           <div className="w-1/2 mb-4 md:w-1/4 md:mb-0">
-            <Link href="/"><a aria-label="Navigate to Home" className="block mb-1 text-xs lg:text-sm hover:underline focus:underline">Home</a></Link>
+            <Link href="/"><a aria-label="Navigate to Home" className="block mb-1 text-xs lg:mb-3 sm:mb-2 lg:text-base hover:underline focus:underline">Home</a></Link>
             
-            <Link href="/about"><a aria-label="Navigate to About" className="block mb-1 text-xs lg:text-sm hover:underline focus:underline">About</a></Link>
+            <Link href="/about"><a aria-label="Navigate to About" className="block mb-1 text-xs lg:mb-3 sm:mb-2 lg:text-base hover:underline focus:underline">About</a></Link>
             
-            <Link href="/about"><a aria-label="Navigate to Hypnobirthing" className="block mb-1 text-xs lg:text-sm hover:underline focus:underline">Hypnobirthing</a></Link>
+            <Link href="/about"><a aria-label="Navigate to Hypnobirthing" className="block mb-1 text-xs lg:mb-3 sm:mb-2 lg:text-base hover:underline focus:underline">Hypnobirthing</a></Link>
           </div>
 
           <div className="w-1/2 mb-4 md:w-1/4 md:mb-0">
-            <Link href="/about"><a aria-label="Navigate to Courses &amp; Booking" className="block mb-1 text-xs lg:text-sm hover:underline focus:underline">Courses &amp; Booking</a></Link>
+            <Link href="/about"><a aria-label="Navigate to Courses &amp; Booking" className="block mb-1 text-xs lg:mb-3 sm:mb-2 lg:text-base hover:underline focus:underline">Courses &amp; Booking</a></Link>
             
-            <Link href="/about"><a aria-label="Navigate to The Blog" className="block mb-1 text-xs lg:text-sm hover:underline focus:underline">The Blog</a></Link>
+            <Link href="/about"><a aria-label="Navigate to The Blog" className="block mb-1 text-xs lg:mb-3 sm:mb-2 lg:text-base hover:underline focus:underline">The Blog</a></Link>
 
-            <Link href="/about"><a aria-label="Navigate to Contact" className="block mb-1 text-xs lg:text-sm hover:underline focus:underline">Get In Touch</a></Link>
+            <Link href="/about"><a aria-label="Navigate to Contact" className="block mb-1 text-xs lg:mb-3 sm:mb-2 lg:text-base hover:underline focus:underline">Get In Touch</a></Link>
           </div>
         </div>
 
-        <small className="text-xs lg:text-sm">&copy; Copyright The Birth Mum 2020. All Rights Reserved.</small>
+        <small className="block w-full mt-16 text-xs text-right opacity-75 lg:text-sm">&copy; Copyright The Birth Mum 2020. All Rights Reserved.</small>
       </Container>
     </footer>
   )

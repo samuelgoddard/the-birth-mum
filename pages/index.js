@@ -4,14 +4,15 @@ import Hero from "../components/hero";
 import Buckets from "../components/buckets";
 import Values from '../components/values'
 import Layout from "../components/layout";
+import Container from '../components/container'
+import AboutExcerpt from "../components/about-excerpt";
 import Footer from '../components/footer'
 import { request } from "../lib/datocms";
 import { metaTagsFragment, responsiveImageFragment } from "../lib/fragments";
 import { motion } from "framer-motion"
 import { fade } from "../helpers/transitionHelper"
-import Container from '../components/container'
-
 import { Image } from 'react-datocms'
+
 
 export default function Index({ subscription }) {
   const {
@@ -72,6 +73,8 @@ export default function Index({ subscription }) {
             </div>
 
             <Values />
+
+            <AboutExcerpt />
 
             <Footer />
 
