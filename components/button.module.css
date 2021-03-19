@@ -1,11 +1,5 @@
 .btn {
-  @apply bg-green text-white px-4 py-2 uppercase tracking-wide rounded-full text-sm border-2 border-green;
-}
-
-@screen md {
-  .btn {
-    @apply px-5 py-3;
-  } 
+  @apply inline-flex items-center px-6 py-3 mb-4 text-sm tracking-widest text-white uppercase border-2 rounded-full bg-green border-green;
 }
 
 .btn:hover, .btn:focus {
@@ -13,13 +7,9 @@
 }
 
 .btn--secondary {
-  @apply border-2 border-green bg-transparent text-green;
+  @apply bg-transparent border-4 border-green text-green;
 }
 
 .btn--secondary:hover, .btn--secondary:focus {
   @apply bg-transparent border-green-light text-green-light;
-}
-
-.btn + .btn {
-  @apply ml-4;
 }

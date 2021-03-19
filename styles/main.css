@@ -20,7 +20,7 @@
   font-family: 'Alata';
   src: url('../public/fonts/Alata-Regular.woff2') format('woff2'),
       url('../public/fonts/Alata-Regular.woff') format('woff');
-  font-weight: 300;
+  font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
@@ -46,7 +46,7 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  @apply p-0 mb-6 font-display font-bold;
+  @apply p-0 mb-6 font-bold font-display;
 }
   
 h1 {
@@ -55,4 +55,17 @@ h1 {
   
 h2 {
   @apply text-3xl;
+}
+
+.bucket a {
+  @apply relative transition-all duration-200;
+}
+
+.bucket a:after {
+  content: '';
+  @apply absolute bottom-0 w-full h-1 -mb-2 transition-all duration-200 bg-pink;  
+}
+
+.bucket a:hover:after {
+  @apply -mb-1;
 }
