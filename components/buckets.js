@@ -3,7 +3,7 @@ import Bucket from "../components/bucket";
 export default function Buckets({}) {
     return (
         
-        <div class="flex flex-wrap justify-center my-24 lg:mt-56">
+        <div className="flex flex-wrap justify-center my-24 lg:mt-56">
               
             <Bucket
             icon="calendar"

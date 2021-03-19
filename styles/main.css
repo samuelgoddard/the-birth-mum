@@ -37,13 +37,7 @@ body {
   @apply font-sans antialiased bg-peach-light text-green;
 }
   
-.content > p {
-  @apply mb-5;
-
-  &:last-of-type {
-    @apply mb-0;
-  }
-}
+/* Headings */
 
 h1, h2, h3, h4, h5, h6 {
   @apply p-0 mb-6 font-bold font-display;
@@ -57,6 +51,8 @@ h2 {
   @apply text-3xl;
 }
 
+
+/* Buckets */
 .bucket a {
   @apply relative transition-all duration-200;
 
@@ -67,5 +63,55 @@ h2 {
 
   &:hover:after {
     @apply -mb-2;
+  }
+}
+
+/* Content */
+.content {
+  
+  p {
+    @apply mb-5;
+  }
+
+  p:last-of-type {
+    @apply mb-0;
+  }
+
+  a {
+    @apply relative text-orange;
+  }
+
+  a:hover {
+    @apply text-orange-dark;
+  }
+
+  a:after {
+    content: '';
+    @apply absolute bottom-0 left-0 w-full -mb-2 transition-all duration-200 bg-orange-dark;
+    height: 2px;
+  }
+
+  a:hover:after {
+    @apply -mb-1;
+  }
+
+  p + ul {
+    @apply mt-5;
+  }
+
+  ul {
+    @apply mb-5;
+  }
+
+  li {
+    @apply relative pl-4 mb-5;
+  }
+
+  li:before {
+    content: '';
+    @apply absolute left-0 w-3 h-3;
+    top: 52%;
+    transform: translateY(-50%);
+    background: url('/icons/icon-chevron-right.svg') left center;
   }
 }

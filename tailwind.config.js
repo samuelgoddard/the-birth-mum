@@ -32,6 +32,10 @@ module.exports = {
         },
         pink: {
           default: '#FFC7BD'
+        },
+        orange: {
+          default: '#DD9881',
+          dark: '#D07354'
         }
       },
       fontSize: {

@@ -9,8 +9,10 @@ import { metaTagsFragment, responsiveImageFragment } from "../lib/fragments";
 import { motion } from "framer-motion"
 import { fade } from "../helpers/transitionHelper"
 import Container from "../components/container";
+import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 
-export default function Courses({ subscription }) {
+export default function Courses({ subscription }) {  
+
   const {
     data: { coursesBooking, allCourses, site },
   } = useQuerySubscription(subscription);
@@ -36,38 +38,50 @@ export default function Courses({ subscription }) {
             />
 
             <Container>
-            <div className="bg-white rounded-xl">
+            <div className="overflow-hidden bg-white rounded-xl">
 
-              <ul className="flex flex-wrap">
+              <Tabs selectedTabClassName="bg-white text-orange-dark">
+                <TabList className="flex flex-wrap bg-gray-100">
+                  {allCourses.map((course, i) => {
+                    return(
+                      
+                      <Tab className="w-1/4 tracking-widest text-center uppercase course-option" key={i}>
+                        <button
+                          key={i}
+                          className={`w-full block p-6 transition duration-200 hover:bg-white`}
+                        >                        
+                          {course.title}  
+                        </button>
+                      </Tab>
+                      
+                    )
+                  })}
+                </TabList>     
+                
                 {allCourses.map((course, i) => {
                   return(
-                    <li className="w-1/4 p-4 text-center" key={i}>
-                      {course.title}
-                    </li>
+                    <TabPanel key={`course-${i}`}>
+                      <div className="flex flex-wrap tab-content">
+
+                        <div className="flex flex-col items-end w-full p-4 text-right md:w-1/3 md:p-12 xl:p-16">
+                          <div className="flex flex-col items-end xl:w-11/12">
+                            <h2 className="mb-4 leading-tight 2xl:text-5xl">{course.title}</h2>
+                            <p className="tracking-widest uppercase xl:w-9/12">Group hypnobirthing classes in Nottingham</p>
+                          </div>
+                        </div>
+
+                        <div className="w-full p-4 md:w-2/3 md:p-12 xl:p-16">
+
+                          <div className="opacity-75 xl:w-11/12 content" dangerouslySetInnerHTML={{__html: course.content }} />
+
+                        </div>
+                        
+                      </div>
+                    </TabPanel>
                   )
                 })}
-              </ul>
-              
-              
-              {allCourses.map((course, i) => {
-                return(
-                  <div className="flex flex-wrap course-container" key={`course-${i}`}>
 
-                    <div className="w-full text-right md:w-1/3">
-                      <h2 className="mb-0">{course.title}</h2>
-                      <p className="tracking-widest uppercase">Group hypnobirthing classes in Nottingham</p>
-                    </div>
-
-                    <div className="w-full md:w-2/3">
-
-                      <div className="content" dangerouslySetInnerHTML={{__html: course.content }} />
-
-                    </div>
-                    
-                  </div>
-                )
-              })}
-              
+              </Tabs>                      
               
             </div>
 
