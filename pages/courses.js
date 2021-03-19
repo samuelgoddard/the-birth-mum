@@ -45,10 +45,10 @@ export default function Courses({ subscription }) {
                   {allCourses.map((course, i) => {
                     return(
                       
-                      <Tab className="w-1/4 tracking-widest text-center uppercase course-option" key={i}>
+                      <Tab className="w-full tracking-widest text-center uppercase md:w-1/4 course-option" key={i}>
                         <button
                           key={i}
-                          className={`w-full block p-6 transition duration-200 hover:bg-white`}
+                          className="block w-full p-6 uppercase transition duration-200 hover:bg-white"
                         >                        
                           {course.title}  
                         </button>
@@ -63,8 +63,8 @@ export default function Courses({ subscription }) {
                     <TabPanel key={`course-${i}`}>
                       <div className="flex flex-wrap tab-content">
 
-                        <div className="flex flex-col items-end w-full p-4 text-right md:w-1/3 md:p-12 xl:p-16">
-                          <div className="flex flex-col items-end xl:w-11/12">
+                        <div className="flex flex-col w-full p-4 md:items-end md:text-right md:w-1/3 md:p-12 xl:p-16">
+                          <div className="flex flex-col md:items-end xl:w-11/12">
                             <h2 className="mb-4 leading-tight 2xl:text-5xl">{course.title}</h2>
                             <p className="tracking-widest uppercase xl:w-9/12">Group hypnobirthing classes in Nottingham</p>
                           </div>
