@@ -149,3 +149,32 @@ h2 {
     background: url('/icons/icon-chevron-right.svg') left center;
   }
 }
+
+/* Forms */
+form {
+  @apply py-6;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="number"],
+input[type="url"],
+input[type="date"],
+input[type="datetime-local"],
+input[type="month"],
+input[type="week"],
+input[type="time"],
+input[type="search"],
+input[type="tel"],
+input[type="checkbox"],
+input[type="radio"],
+select,
+select[multiple],
+textarea {
+  @apply w-full border-gray-400 rounded shadow-sm;
+}
+
+textarea {
+  @apply h-32;
+}

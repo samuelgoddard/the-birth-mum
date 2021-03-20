@@ -33,8 +33,6 @@ export default function Header() {
     }
   };
 
-  console.log(navItems);
-
   return (
     <header className="py-6 md:py-10 xl:pb-16">
       <Container>

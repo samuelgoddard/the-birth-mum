@@ -2,7 +2,7 @@ import Container from './container'
 import { Image } from 'react-datocms'
 import Button from '../components/button'
 
-export default function Hero({ subHeading, heading, text, image, buttons, thin}) {
+export default function Hero({ subHeading, heading, text, image, buttons, thin, form}) {
   return (
     <div className="mb-12 md:mb-24">
       <Container>
@@ -43,6 +43,45 @@ export default function Hero({ subHeading, heading, text, image, buttons, thin})
               </div>
             </div>
           )}
+
+          { form && 
+            <div className="w-full md:w-1/2 md:px-5">
+
+              <p className="px-3 text-xs opacity-75 text-green-light">Fields marked with a * are required.</p>
+              
+              <form id="form" action="https://formspree.io/f/mbjqrjwk" method="POST" className="flex flex-wrap -m-1 overflow-x-hidden">
+
+                <label className="w-full py-3 md:p-3 md:w-1/2">
+                  <input required type="text" className="w-full" name="name" placeholder="Name *" />
+                </label>
+
+                <label className="w-full py-3 md:p-3 md:w-1/2">
+                  <input required type="text" name="postcode" placeholder="Postcode *" />
+                </label>
+
+                <label className="w-full py-3 md:p-3 md:w-1/2">
+                  <input required type="email" name="email" placeholder="Email *" />
+                </label>
+
+                <label className="w-full py-3 md:p-3 md:w-1/2">
+                  <input required type="tel" name="telephone" placeholder="Telephone *" />
+                </label>
+                
+                <label className="w-full py-3 md:p-3">
+                  <textarea required placeholder="Your message *" name="message" className="w-full"></textarea>
+                </label>
+
+                <input type="text" name="_gotcha" className="hidden" />
+                
+                <div className="w-full p-3">
+                  <input type="submit" className="px-4 py-2 tracking-widest text-white uppercase transition duration-200 rounded-full cursor-pointer bg-orange hover:bg-orange-dark border-orange-dark" value="Send Enquiry" />
+                </div>
+
+              </form>
+              
+
+            </div>
+          }
         </div>
       </Container>
     </div>

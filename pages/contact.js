@@ -34,7 +34,7 @@ export default function Contact({ subscription }) {
               subHeading={contact.heroSubHeading}
               heading={contact.heroHeading}
               text={contact.heroText}
-              image={contact.heroImage}
+              form
             />
 
             <Values values={global.values} />
@@ -44,7 +44,7 @@ export default function Contact({ subscription }) {
             <Buckets />
 
             <Footer />
-            
+
           </motion.div>
         </motion.div>
       </Layout>
@@ -68,11 +68,6 @@ export async function getStaticProps() {
           heroSubHeading
           heroHeading
           heroText
-          heroImage {
-            responsiveImage(imgixParams: {fm: jpg, fit: crop, w: 1200, h: 850 }) {
-              ...responsiveImageFragment
-            }
-          }
         }
         global {
           values {
