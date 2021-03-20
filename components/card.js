@@ -1,7 +1,11 @@
 import Link from 'next/link'
 import { Image } from 'react-datocms'
+import { format, parseISO } from 'date-fns'
 
-export default function Card({ url, image, title }) {
+export default function Card({ url, image, title, date }) {
+    
+    const newDate = parseISO(date);    
+
     return(
         <div className="w-full md:w-1/2 lg:w-1/4 md:px-4">
 
@@ -17,8 +21,14 @@ export default function Card({ url, image, title }) {
                         />
                     }
                     </div>
+
+                    {date && 
+                        <small className="block mt-6 mb-0 text-center text-green-light">
+                            {format(newDate, 'MMMM Do, yyyy')}
+                        </small>
+                    }
                     
-                    <span className="block mt-4 mb-2 text-lg tracking-widest text-center uppercase md:mt-8">{title}</span>
+                    <span className="block mt-4 mb-2 text-lg tracking-widest text-center uppercase md:mt-2">{title}</span>
                     
                 </a>
                 

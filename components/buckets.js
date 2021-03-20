@@ -9,7 +9,7 @@ export default function Buckets({}) {
             icon="calendar"
             title="Interested?"
             text="Check out our course options and upcoming dates!"
-            linkTarget="/courses"
+            linkTarget="courses"
             linkLabel="View Dates"
             />
 
@@ -17,7 +17,7 @@ export default function Buckets({}) {
             icon="contact"
             title="Get in touch!"
             text="We can have a chat and discuss the perfect course for you."
-            linkTarget="/contact"
+            linkTarget="contact"
             linkLabel="Contact me"
             />
 
@@ -25,7 +25,7 @@ export default function Buckets({}) {
             icon="book"
             title="Book!"
             text="Book a TBM course and prepare for a positive birth."
-            linkTarget="/courses"
+            linkTarget="courses"
             linkLabel="View courses"
             />
               

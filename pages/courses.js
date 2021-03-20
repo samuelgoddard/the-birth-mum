@@ -22,6 +22,7 @@ export default function Courses({ subscription }) {
   return (
     <>
       <Layout>
+        
         <Head>{renderMetaTags(metaTags)}</Head>
 
         <motion.div
@@ -30,6 +31,7 @@ export default function Courses({ subscription }) {
           exit="exit"
         >  
           <motion.div variants={fade}>
+
             <Hero
               subHeading={coursesBooking.heroSubHeading}
               heading={coursesBooking.heroHeading}

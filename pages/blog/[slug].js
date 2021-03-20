@@ -8,6 +8,7 @@ import { request } from "../../lib/datocms";
 import { metaTagsFragment, responsiveImageFragment } from "../../lib/fragments";
 import { motion } from "framer-motion"
 import { fade } from "../../helpers/transitionHelper"
+import { format, parseISO } from 'date-fns'
 
 export default function About({ subscription }) {
   const {
@@ -15,6 +16,8 @@ export default function About({ subscription }) {
   } = useQuerySubscription(subscription);
 
   const metaTags = blog.seo.concat(site.favicon);
+
+  const newDate = parseISO(blog.date);    
 
   return (
     <>
@@ -38,7 +41,7 @@ export default function About({ subscription }) {
                       )}
                       <h1 className="text-4xl leading-none md:text-5xl lg:text-6xl xl:text-7xl">{ blog.title }</h1>
                       <small>
-                        Posted on: {blog.date}
+                        Posted on: {format(newDate, 'MMMM Do, yyyy')}
                       </small>
                       { blog.content && (
                         <div
@@ -78,7 +81,7 @@ export async function getStaticProps({ params }) {
             title
             content
             heroHeading
-            heroSubheading
+            heroSubHeading
             heroImage {
                 responsiveImage(imgixParams: {fm: jpg, fit: crop, w: 900, h: 900 }) {
                     ...responsiveImageFragment

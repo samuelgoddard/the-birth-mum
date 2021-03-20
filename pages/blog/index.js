@@ -1,6 +1,7 @@
 import Head from "next/head";
 import { renderMetaTags, useQuerySubscription } from "react-datocms";
 import Container from "../../components/container";
+import Hero from '../../components/hero';
 import Layout from "../../components/layout";
 import Footer from '../../components/footer';
 import Card from '../../components/card';
@@ -13,10 +14,10 @@ import { fade } from "../../helpers/transitionHelper"
 
 export default function About({ subscription }) {
   const {
-    data: { global, home, site, allBlogs, pagedBlogs },
+    data: { global, blog, site, allBlogs, pagedBlogs },
   } = useQuerySubscription(subscription);
 
-  const metaTags = home.seo.concat(site.favicon);
+  const metaTags = blog.seo.concat(site.favicon);
 
   // Set up variables to pass to Pagination
   const currentPage = 1;
@@ -33,6 +34,15 @@ export default function About({ subscription }) {
         >  
           <motion.div variants={fade}>
 
+            <Hero
+              subHeading={blog.heroSubHeading}
+              heading={blog.heroHeading}
+              text={blog.heroText}
+              image={blog.heroImage}
+              buttons
+              thin
+            />
+
             <Container>
               <div className="flex flex-wrap my-32">
                 {pagedBlogs.map((blog, i) => {
@@ -41,6 +51,7 @@ export default function About({ subscription }) {
                       url={`blog/${blog.slug}`}
                       image={blog.heroImage}
                       title={blog.title}
+                      date={blog.date}
                     />
                   )
                 })}
@@ -76,7 +87,15 @@ export async function getStaticProps() {
             ...metaTagsFragment
           }
         }
-        home {
+        blog: blogIndex {
+          heroHeading
+          heroSubHeading
+          heroText
+          heroImage {
+            responsiveImage(imgixParams: {fm: jpg, fit: crop, w: 1200, h: 850 }) {
+              ...responsiveImageFragment
+            }
+          } 
           seo: _seoMetaTags {
             ...metaTagsFragment
           }
@@ -92,7 +111,8 @@ export async function getStaticProps() {
             responsiveImage(imgixParams: {fm: jpg, fit: crop, w: 600, h: 425 }) {
               ...responsiveImageFragment
             }
-          }          
+          }
+          date: _firstPublishedAt        
         }
         global {
           values {

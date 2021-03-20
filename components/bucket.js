@@ -13,7 +13,7 @@ export default function Bucket({icon, title, text, linkTarget, linkLabel}) {
             <div className="relative z-10 mt-20 lg:px-8 xl:px-20 ">
                 <p className="text-lg tracking-widest uppercase">{title}</p>
                 <p className="my-3 opacity-75">{text}</p>
-                <Link href={linkTarget}>
+                <Link href={`/${encodeURIComponent(linkTarget)}`}>
                     <a className="inline-flex items-center justify-center text-lg tracking-widest uppercase text-green-light">
                         {linkLabel}
                         <img className="w-4 ml-2 text-green" src="icons/icon-arrow-right.svg" alt={linkLabel} />
