@@ -3,6 +3,7 @@ import { renderMetaTags, useQuerySubscription } from "react-datocms";
 import Hero from "../components/hero";
 import Layout from "../components/layout";
 import Buckets from "../components/buckets";
+import Button from "../components/button";
 import Footer from '../components/footer'
 import { request } from "../lib/datocms";
 import { metaTagsFragment, responsiveImageFragment } from "../lib/fragments";
@@ -66,9 +67,15 @@ export default function Courses({ subscription }) {
                       <div className="flex flex-wrap tab-content">
 
                         <div className="flex flex-col w-full p-4 md:items-end md:text-right md:w-1/3 md:p-12 xl:p-16">
-                          <div className="flex flex-col md:items-end xl:w-11/12">
+                          <div className="flex flex-col md:items-end">
                             <h2 className="mb-4 leading-tight 2xl:text-5xl">{course.title}</h2>
                             <p className="tracking-widest uppercase xl:w-9/12">Group hypnobirthing classes in Nottingham</p>
+                            
+                            <div className="flex flex-wrap mt-6">
+                              <span className="flex items-center px-4 py-2 mr-4 rounded-full md:mr-0 md:w-full md:justify-center md:mb-4 bg-peach xl:w-auto xl:mb-0 xl:mr-4">{course.price}</span>
+                              <Button link="/contact" classes="text-center md:w-full justify-center xl:w-auto">Get in touch</Button>
+                            </div>
+
                           </div>
                         </div>
 
