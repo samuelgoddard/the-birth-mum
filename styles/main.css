@@ -33,6 +33,16 @@
 @tailwind utilities;
 
 /* Custom */
+
+::-moz-selection { /* Code for Firefox */
+  @apply text-white bg-orange;
+}
+
+::selection {
+  @apply text-white bg-orange;
+}
+
+
 body {
   @apply font-sans antialiased bg-peach-light text-green;
 }
