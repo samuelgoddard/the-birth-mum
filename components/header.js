@@ -1,8 +1,40 @@
 import Container from '../components/container'
 import Button from '../components/button'
 import Link from 'next/link'
+import { useRouter } from 'next/router'
 
 export default function Header() {
+
+  const router = useRouter();
+
+  let currentPath = router.pathname;
+  console.log(currentPath);
+
+  const navItems = {
+    Home: {
+      href: '/',
+      label: 'Home'
+    },
+    About: {
+      href: '/about',
+      label: 'About'
+    },
+    Hypnobirthing: {
+      href: '/hypnobirthing',
+      label: 'Hynobirthing'
+    },
+    Courses: {
+      href: '/courses',
+      label: 'Courses & Booking'
+    },
+    Blog: {
+      href: '/blog',
+      label: 'The Blog'
+    }
+  };
+
+  console.log(navItems);
+
   return (
     <header className="py-6 md:py-10 xl:pb-16">
       <Container>
@@ -22,15 +54,16 @@ export default function Header() {
 
           <div className="hidden w-full text-right md:block md:flex-1">
             
-            <Link href="/"><a aria-label="Navigate to Home" className="text-xs tracking-widest uppercase lg:text-sm hover:underline focus:underline md:mx-3 lg:mx-5 lg:ml-5">Home</a></Link>
-            
-            <Link href="/about"><a aria-label="Navigate to About" className="text-xs tracking-widest uppercase lg:text-sm hover:underline focus:underline md:mx-3 lg:mx-5">About</a></Link>
-            
-            <Link href="/hypnobirthing"><a aria-label="Navigate to Hypnobirthing" className="text-xs tracking-widest uppercase lg:text-sm hover:underline focus:underline md:mx-3 lg:mx-5">Hypnobirthing</a></Link>
-            
-            <Link href="/courses"><a aria-label="Navigate to Courses &amp; Booking" className="text-xs tracking-widest uppercase lg:text-sm hover:underline focus:underline md:mx-3 lg:mx-5">Courses &amp; Booking</a></Link>
-            
-            <Link href="/blog"><a aria-label="Navigate to The Blog" className="text-xs tracking-widest uppercase lg:text-sm hover:underline focus:underline md:mx-3 lg:mx-5">The Blog</a></Link>
+            {Object.values(navItems).map((item, i) => {
+              return(
+                <Link href={item.href}>
+                  <a aria-label={`Go to ${item.label}`} className={`text-xs tracking-widest uppercase lg:text-sm md:mx-3 lg:mx-5 navItem ${currentPath === item.href ? 'text-orange-dark navActive' : ''}`}>
+                    {item.label}
+                  </a>
+                </Link>
+              )
+            })
+            }
 
             <Button link="/contact" aria-label="Navigate to Contact" classes="md:mx-3 lg:mx-5 lg:mr-5">Get In Touch</Button>
             
