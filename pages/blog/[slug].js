@@ -56,7 +56,7 @@ export default function About({ subscription }) {
             </div>
 
 
-            <Values values={global.values} />
+            <Values values={global.values} blob />
 
             <Footer />
             

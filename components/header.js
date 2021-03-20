@@ -6,9 +6,7 @@ import { useRouter } from 'next/router'
 export default function Header() {
 
   const router = useRouter();
-
   let currentPath = router.pathname;
-  console.log(currentPath);
 
   const navItems = {
     Home: {
@@ -34,8 +32,11 @@ export default function Header() {
   };
 
   return (
-    <header className="py-6 md:py-10 xl:pb-16">
+    <header className="relative py-6 md:py-10 xl:pb-16">
       <Container>
+
+        <img className="absolute top-0 right-0 z-0" src="/blob-peach-small.svg" alt="The Birth Mum" />
+
         <div className="flex flex-wrap items-center justify-between">
           
           <div className="w-24 lg:w-48">
@@ -54,7 +55,7 @@ export default function Header() {
             
             {Object.values(navItems).map((item, i) => {
               return(
-                <Link href={item.href}>
+                <Link key={i} href={item.href}>
                   <a aria-label={`Go to ${item.label}`} className={`text-xs tracking-widest uppercase lg:text-sm md:mx-3 lg:mx-5 navItem ${currentPath === item.href ? 'text-orange-dark navActive' : ''}`}>
                     {item.label}
                   </a>
@@ -63,7 +64,7 @@ export default function Header() {
             })
             }
 
-            <Button link="/contact" aria-label="Navigate to Contact" classes="md:mx-3 lg:mx-5 lg:mr-5">Get In Touch</Button>
+            <Button link="/contact" aria-label="Navigate to Contact" classes="relative z-10 md:mx-3 lg:mx-5 lg:mr-5">Get In Touch</Button>
             
           </div>
         </div>

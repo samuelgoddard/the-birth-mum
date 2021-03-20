@@ -172,9 +172,25 @@ input[type="radio"],
 select,
 select[multiple],
 textarea {
-  @apply w-full border-gray-400 rounded shadow-sm;
+  @apply w-full border-gray-400 rounded shadow-sm text-green;
 }
 
 textarea {
   @apply h-32;
+}
+
+/* Blobs */
+
+.blob-pink {
+  @apply absolute right-0;
+  bottom: -40%;
+  transform: translatex(25%);
+  z-index: 1;
+}
+
+.blob-peach {
+  @apply absolute left-0;
+  bottom: -40%;
+  transform: translatex(-25%);
+  z-index: 1;
 }

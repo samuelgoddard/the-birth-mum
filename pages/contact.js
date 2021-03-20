@@ -6,8 +6,6 @@ import Layout from "../components/layout";
 import Hero from "../components/hero";
 import Values from "../components/values";
 import Buckets from "../components/buckets";
-import Container from "../components/container";
-import Card from "../components/card";
 import AboutExcerpt from "../components/about-excerpt";
 import Footer from '../components/footer'
 import { motion } from "framer-motion"
@@ -74,20 +72,10 @@ export async function getStaticProps() {
             heading
             text
           }
-          cards {
-            cardTitle
-            cardImage {
-              responsiveImage(imgixParams: {fm: jpg, fit: crop, w: 600, h: 425 }) {
-                ...responsiveImageFragment
-              }
-            }
-            cardUrl
-          }
         }
       }
 
       ${metaTagsFragment}
-      ${responsiveImageFragment}
     `
   };
 

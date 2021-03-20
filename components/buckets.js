@@ -3,9 +3,10 @@ import Bucket from "../components/bucket";
 export default function Buckets({}) {
     return (
         
-        <div className="flex flex-wrap justify-center my-24 lg:mt-56">
+        <div className="relative z-10 flex flex-wrap justify-center my-24 lg:mt-56">
               
             <Bucket
+            id="calendar"
             icon="calendar"
             title="Interested?"
             text="Check out our course options and upcoming dates!"
@@ -14,6 +15,7 @@ export default function Buckets({}) {
             />
 
             <Bucket
+            id="contact"
             icon="contact"
             title="Get in touch!"
             text="We can have a chat and discuss the perfect course for you."
@@ -22,6 +24,7 @@ export default function Buckets({}) {
             />
 
             <Bucket
+            id="book"
             icon="book"
             title="Book!"
             text="Book a TBM course and prepare for a positive birth."

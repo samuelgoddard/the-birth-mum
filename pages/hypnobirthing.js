@@ -29,6 +29,7 @@ export default function Hypnobirthing({ subscription }) {
           initial="initial"
           animate="enter"
           exit="exit"
+          className="overflow-x-hidden"
         >  
           <motion.div variants={fade}>
             
@@ -38,6 +39,7 @@ export default function Hypnobirthing({ subscription }) {
               text={hypnobirthing.heroText}
               image={hypnobirthing.heroImage}
               thin
+              blob
             />
 
             <Values values={global.values} />
@@ -51,6 +53,7 @@ export default function Hypnobirthing({ subscription }) {
                 {global.cards.map((card, i) => {
                   return(
                     <Card
+                      key={i}
                       url={card.cardUrl}
                       image={card.cardImage}
                       title={card.cardTitle}

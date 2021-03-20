@@ -9,6 +9,7 @@ import Values from '../components/values'
 import Container from '../components/container'
 import AboutExcerpt from "../components/about-excerpt";
 import Footer from '../components/footer'
+import Blob from '../components/blob'
 import { Image } from 'react-datocms'
 import { motion } from "framer-motion"
 import { fade } from "../helpers/transitionHelper"
@@ -31,6 +32,7 @@ export default function Index({ subscription }) {
           initial="initial"
           animate="enter"
           exit="exit"
+          className="overflow-x-hidden"
         >  
           <motion.div variants={fade}>
             <Hero
@@ -39,14 +41,15 @@ export default function Index({ subscription }) {
               text={home.heroText}
               image={home.heroImage}
               buttons
+              wave
               thin
             />
 
             <Buckets />
 
-            <div className="mb-12 md:mb-24">
+            <div className="relative mb-12 md:mb-24">
               <Container>
-                <div className="flex flex-wrap items-center justify-end lg:pl-32">
+                <div className="relative z-10 flex flex-wrap items-center justify-end lg:pl-32">
                   <div className="w-full mb-6 md:w-1/2 md:mb-0 md:px-5">
                     <div className="w-full">
                       { home.whatWeDoSubheading && (
@@ -73,9 +76,12 @@ export default function Index({ subscription }) {
                   )}
                 </div>
               </Container>
+
+              <Blob color="pink" />
+              
             </div>
 
-            <Values values={global.values} />
+            <Values values={global.values} blob />
 
             <AboutExcerpt />
             
@@ -84,6 +90,7 @@ export default function Index({ subscription }) {
                 {global.cards.map((card, i) => {
                   return(
                     <Card
+                      key={i}
                       url={card.cardUrl}
                       image={card.cardImage}
                       title={card.cardTitle}

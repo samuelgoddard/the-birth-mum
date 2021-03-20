@@ -37,7 +37,7 @@ export default function About({ subscription }) {
               image={about.heroImage}
             />
 
-            <Values values={global.values} />
+            <Values values={global.values} blob />
 
             <AboutExcerpt />
 
@@ -48,6 +48,7 @@ export default function About({ subscription }) {
                 {global.cards.map((card, i) => {
                   return(
                     <Card
+                      key={i}
                       url={card.cardUrl}
                       image={card.cardImage}
                       title={card.cardTitle}

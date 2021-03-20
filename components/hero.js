@@ -2,11 +2,11 @@ import Container from './container'
 import { Image } from 'react-datocms'
 import Button from '../components/button'
 
-export default function Hero({ subHeading, heading, text, image, buttons, thin, form}) {
+export default function Hero({ subHeading, heading, text, image, buttons, thin, form, wave, blob}) {
   return (
-    <div className="mb-12 md:mb-24">
+    <div className="relative mb-12 md:mb-24">
       <Container>
-        <div className={`flex flex-wrap items-center ${thin ? 'justify-end lg:pl-32' : ''}`}>
+        <div className={`relative z-10 flex flex-wrap items-center ${thin ? 'justify-end lg:pl-32' : ''}`}>
           <div className="w-full mb-6 md:w-1/2 md:mb-0 md:px-5">
             <div className="w-full">
               
@@ -83,7 +83,16 @@ export default function Hero({ subHeading, heading, text, image, buttons, thin, 
             </div>
           }
         </div>
+
+        {wave &&
+          <img className="absolute bottom-0 left-0 z-0 -mb-144" src="/wave.svg" alt="The Birth Mum" />
+        }
+        
       </Container>
+
+        { blob && 
+          <img className="-mb-96 blob-pink" src="/blob-pink.svg" alt="The Birth Mum" />
+        }
     </div>
   )
 }

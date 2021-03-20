@@ -39,15 +39,16 @@ export default function About({ subscription }) {
               heading={blog.heroHeading}
               text={blog.heroText}
               image={blog.heroImage}
-              buttons
               thin
+              wave
             />
 
             <Container>
-              <div className="flex flex-wrap my-32">
+              <div className="relative z-10 flex flex-wrap my-32">
                 {pagedBlogs.map((blog, i) => {
                   return(
                     <Card
+                      key={i}
                       url={`blog/${blog.slug}`}
                       image={blog.heroImage}
                       title={blog.title}

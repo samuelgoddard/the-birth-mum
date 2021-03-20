@@ -44,6 +44,13 @@ module.exports = {
         '7xl': '4.5rem',
         '8xl': '6.25rem',
       },
+      spacing: {
+        '72' : '18rem',
+        '80' : '20rem',
+        '96' : '24rem',
+        '128': '32rem',
+        '144': '36rem',
+      }
     },
   },
   plugins: [

@@ -34,6 +34,7 @@ export default function About({ subscription }) {
                 {pagedBlogs.map((blog, i) => {
                   return(
                     <Card
+                      key={i}
                       url={`blog/${blog.slug}`}
                       image={blog.heroImage}
                       title={blog.title}
