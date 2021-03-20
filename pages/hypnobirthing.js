@@ -6,7 +6,8 @@ import Layout from "../components/layout";
 import Hero from "../components/hero";
 import Values from "../components/values";
 import Buckets from "../components/buckets";
-import Cards from "../components/cards";
+import Container from "../components/container";
+import Card from "../components/card";
 import AboutExcerpt from "../components/about-excerpt";
 import Footer from '../components/footer'
 import { motion } from "framer-motion"
@@ -45,7 +46,19 @@ export default function Hypnobirthing({ subscription }) {
 
             <Buckets />
 
-            <Cards cards={global.cards} />
+            <Container>
+              <div className="flex flex-wrap my-32">
+                {global.cards.map((card, i) => {
+                  return(
+                    <Card
+                      url={card.cardUrl}
+                      image={card.cardImage}
+                      title={card.cardTitle}
+                    />
+                  )
+                })}
+              </div>
+            </Container>
             
             <Footer />
           </motion.div>

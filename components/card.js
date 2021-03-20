@@ -28,7 +28,7 @@ export default function Card({ url, image, title, date }) {
                         </small>
                     }
                     
-                    <span className="block mt-4 mb-2 text-lg tracking-widest text-center uppercase md:mt-2">{title}</span>
+                    <span className="block mt-4 mb-2 text-lg tracking-widest text-center uppercase md:mt-6">{title}</span>
                     
                 </a>
                 
