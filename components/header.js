@@ -41,7 +41,7 @@ export default function Header() {
 
       <Container>
 
-        <img className="absolute top-0 right-0 z-0 -mt-96" src="/blob-peach-small.svg" alt="The Birth Mum" />
+        <img className="absolute top-0 right-0 z-0 -mt-32" src="/blob-peach-small.svg" alt="The Birth Mum" />
 
         <div className="relative z-10 flex flex-wrap items-center justify-between">
           

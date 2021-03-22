@@ -228,6 +228,8 @@ textarea {
 .wave {
   left: 50%;
   transform: translateX(-50%);
+  background: url('/wave.svg') left center;
+  height: 938px;
 }
 
 @screen lg {

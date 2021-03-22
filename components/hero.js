@@ -92,7 +92,9 @@ export default function Hero({ subHeading, heading, text, image, buttons, thin, 
       </Container>
 
       {wave &&
-        <img className="absolute bottom-0 z-0 wave -mb-144" src="/wave.svg" alt="The Birth Mum" />
+        <div className="absolute bottom-0 z-0 w-full bg-red-500 wave -mb-144">
+          {/* <img className="" src="/wave.svg" alt="The Birth Mum" /> */}
+        </div>
       }
       
     </div>
