@@ -20,26 +20,26 @@ export default function Pagination({currentPage, postsPerPage, allPosts, pagedUr
 
             {pageLinks.map((page, i) => {
                 return (
-                    <>
-                    {page === 1 && 
-                        <li key={i} className="mx-2 list-none ">
-                            {
-                                currentPage == 1 
-                                ? <div className="px-4 py-2 text-white rounded-lg bg-orange">{page}</div>
-                                : <Link scroll={false} className="px-4 py-2 bg-white text-orange" href={`/${pagedUrlBase}/`}><a>{page}</a></Link>
-                            }                            
-                        </li>
-                    }
-                    {page !== 1 && 
-                        <li key={i} className="mx-2 list-none">
-                            {
-                                currentPage == page
-                                ? <div className="px-4 py-2 text-white rounded-lg bg-orange">{page}</div>
-                                : <Link scroll={false} className="px-4 py-2 bg-white text-orange" href={`/${pagedUrlBase}/page/${page}`}><a>{page}</a></Link>
-                            }
-                        </li>
-                    }
-                    </>
+                    <span key={i}>
+                        {page === 1 && 
+                            <li className="mx-2 list-none ">
+                                {
+                                    currentPage == 1 
+                                    ? <div className="px-4 py-2 text-white rounded-lg bg-orange">{page}</div>
+                                    : <Link scroll={false} className="px-4 py-2 bg-white text-orange" href={`/${pagedUrlBase}/`}><a>{page}</a></Link>
+                                }                            
+                            </li>
+                        }
+                        {page !== 1 && 
+                            <li className="mx-2 list-none">
+                                {
+                                    currentPage == page
+                                    ? <div className="px-4 py-2 text-white rounded-lg bg-orange">{page}</div>
+                                    : <Link scroll={false} className="px-4 py-2 bg-white text-orange" href={`/${pagedUrlBase}/page/${page}`}><a>{page}</a></Link>
+                                }
+                            </li>
+                        }
+                    </span>
                 )                
             })}
 
