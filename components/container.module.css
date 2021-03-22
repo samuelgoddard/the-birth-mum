@@ -1,5 +1,5 @@
 .container {
-  @apply px-5 mx-auto max-w-screen-2xl;
+  @apply relative px-5 mx-auto max-w-screen-2xl;
 
   @screen md {
     @apply px-8;

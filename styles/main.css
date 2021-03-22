@@ -209,12 +209,12 @@ textarea {
 }
 
 /* Blobs */
-
 .blob-pink {
   @apply absolute right-0;
   bottom: -40%;
   transform: translatex(25%);
   z-index: 1;
+  @apply w-96;
 }
 
 .blob-peach {
@@ -222,4 +222,25 @@ textarea {
   bottom: -40%;
   transform: translatex(-25%);
   z-index: 1;
+  @apply w-96;
+}
+
+.wave {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+@screen lg {
+  .blob-pink,
+  .blob-peach {
+    @apply w-auto;
+  }
+
+  .blob-pink {
+    transform: translateX(40%);
+  }
+
+  .blob-peach {
+    transform: translateX(-40%);
+  }
 }

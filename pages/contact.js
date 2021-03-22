@@ -35,7 +35,7 @@ export default function Contact({ subscription }) {
               form
             />
 
-            <Values values={global.values} />
+            <Values values={global.values} blob />
 
             <AboutExcerpt />
 

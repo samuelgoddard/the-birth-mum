@@ -68,7 +68,7 @@ export default function About({ subscription }) {
               pagedUrlBase="blog"
             />
 
-            <Values values={global.values} />
+            <Values values={global.values} blob />
 
             <Footer />
             

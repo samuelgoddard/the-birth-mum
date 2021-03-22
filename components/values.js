@@ -33,11 +33,12 @@ export default function Values({ values, blob }) {
                     </p>
 
                 </div>
+
+                {blob &&
+                    <Blob color="peach" />
+                }
+
             </Container>
-            
-            {blob &&
-                <Blob color="peach" />
-            }
             
         </div>
     )

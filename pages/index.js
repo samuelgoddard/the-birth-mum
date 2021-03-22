@@ -75,9 +75,8 @@ export default function Index({ subscription }) {
                     </div>
                   )}
                 </div>
-              </Container>
-
-              <Blob color="pink" />
+                <Blob color="pink" />
+              </Container>              
               
             </div>
 

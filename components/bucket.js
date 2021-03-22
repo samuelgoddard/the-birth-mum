@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 export default function Bucket({id, icon, title, text, linkTarget, linkLabel}) {
     return (
-        <div key={id} className="w-full px-4 mb-24 text-center md:w-1/3 2xl:w-1/4 bucket">
+        <div key={id} className="w-full px-4 mb-24 text-center md:w-1/3 bucket">
             
             <div className="relative flex items-center justify-center">
                 <img className="absolute z-0" src="bucket-icon-bg.svg" alt="" />
