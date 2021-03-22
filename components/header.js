@@ -1,5 +1,6 @@
 import Container from '../components/container'
 import MobileMenu from '../components/mobile-menu'
+import { navItems } from '../helpers/navItems'
 import Button from '../components/button'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
@@ -9,30 +10,6 @@ export default function Header() {
   //Used for active nav states
   const router = useRouter();
   let currentPath = router.pathname;
-
-
-  const navItems = {
-    Home: {
-      href: '/',
-      label: 'Home'
-    },
-    About: {
-      href: '/about',
-      label: 'About'
-    },
-    Hypnobirthing: {
-      href: '/hypnobirthing',
-      label: 'Hynobirthing'
-    },
-    Courses: {
-      href: '/courses',
-      label: 'Courses & Booking'
-    },
-    Blog: {
-      href: '/blog',
-      label: 'The Blog'
-    }
-  };
 
   return (
     <header className="relative py-6 md:py-10 xl:pb-16">
