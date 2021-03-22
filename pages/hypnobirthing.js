@@ -49,7 +49,7 @@ export default function Hypnobirthing({ subscription }) {
             <Buckets />
 
             <Container>
-              <div className="flex flex-wrap my-32">
+              <div className="flex flex-wrap mb-20 md:my-32">
                 {global.cards.map((card, i) => {
                   return(
                     <Card

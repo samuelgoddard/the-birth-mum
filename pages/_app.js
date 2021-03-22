@@ -1,10 +1,10 @@
-import React from 'react';
+import { React } from 'react';
 import '../styles/main.css'
 import { AnimatePresence } from 'framer-motion';
 import { useRouter } from 'next/router'
 
 function MyApp({ Component, pageProps }) {
-  const router = useRouter()
+  const router = useRouter();  
 
   return (
     <div data-scroll-container id="scroll-container">

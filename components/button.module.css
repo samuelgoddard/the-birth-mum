@@ -1,5 +1,5 @@
 .btn {
-  @apply inline-flex items-center px-6 py-3 text-sm tracking-widest text-white uppercase transition-all duration-200 border-2 rounded-full bg-green border-green;
+  @apply inline-flex items-center px-4 py-2 text-xs tracking-widest text-white uppercase transition-all duration-200 border-2 rounded-full bg-green border-green;
 }
 
 .btn:hover, .btn:focus {
@@ -12,4 +12,10 @@
 
 .btn--secondary:hover, .btn--secondary:focus {
   @apply bg-transparent border-green-light text-green-light;
+}
+
+@screen lg {
+  .btn {
+    @apply px-6 py-3 text-sm;
+  }
 }

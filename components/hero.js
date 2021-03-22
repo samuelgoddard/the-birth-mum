@@ -24,8 +24,8 @@ export default function Hero({ subHeading, heading, text, image, buttons, thin, 
               )}
 
               { buttons &&
-                <div className="flex flex-wrap justify-between mt-6 xs:justify-start">
-                  <Button link="/about" classes="mb-4 sm:mb-0">Find out more</Button>
+                <div className="flex flex-wrap mt-6 xs:justify-start">
+                  <Button link="/about" classes="mr-1 xs:mr-2">Find out more</Button>
                   <Button link="/about" secondary classes="xs:ml-4">Get In Touch</Button>
                 </div>
               }

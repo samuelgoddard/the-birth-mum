@@ -86,7 +86,7 @@ export default function Index({ subscription }) {
             <AboutExcerpt />
             
             <Container>
-              <div className="flex flex-wrap my-32">
+              <div className="flex flex-wrap mb-20 md:my-32">
                 {global.cards.map((card, i) => {
                   return(
                     <Card

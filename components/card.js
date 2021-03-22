@@ -7,7 +7,7 @@ export default function Card({ url, image, title, date }) {
     const newDate = parseISO(date);    
 
     return(
-        <div className="w-full md:w-1/2 lg:w-1/4 md:px-4">
+        <div className="w-full mb-4 sm:w-1/2 xl:w-1/4 sm:px-4">
 
             <Link href={`/${url}`}>
 
