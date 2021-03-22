@@ -1,5 +1,7 @@
 .btn {
   @apply inline-flex items-center px-4 py-2 text-xs tracking-widest text-white uppercase transition-all duration-200 border-2 rounded-full bg-green border-green;
+  appearance: none;
+  -webkit-appearance: none;
 }
 
 .btn:hover, .btn:focus {

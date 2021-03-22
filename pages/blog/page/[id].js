@@ -1,15 +1,15 @@
 import Head from "next/head";
 import { renderMetaTags, useQuerySubscription } from "react-datocms";
-import Container from "../../components/container";
-import Layout from "../../components/layout";
-import Footer from '../../components/footer';
-import Card from '../../components/card';
-import Values from '../../components/values';
-import Pagination from '../../components/pagination'
-import { request } from "../../lib/datocms";
-import { metaTagsFragment, responsiveImageFragment } from "../../lib/fragments";
+import Container from "../../../components/container";
+import Layout from "../../../components/layout";
+import Footer from '../../../components/footer';
+import Card from '../../../components/card';
+import Values from '../../../components/values';
+import Pagination from '../../../components/pagination'
+import { request } from "../../../lib/datocms";
+import { metaTagsFragment, responsiveImageFragment } from "../../../lib/fragments";
 import { motion } from "framer-motion"
-import { fade } from "../../helpers/transitionHelper"
+import { fade } from "../../../helpers/transitionHelper"
 
 export default function About({ subscription }) {
   const {
@@ -64,7 +64,7 @@ export default function About({ subscription }) {
   );
 }
 
-export async function getStaticProps() {
+export async function getStaticProps({params}) {
   const pageId = parseInt(params.id);
   const postsPerPage = 10;
   const skip = pageId*postsPerPage-postsPerPage;  
