@@ -9,7 +9,7 @@ export default function Card({ url, image, title, date }) {
     return(
         <div className="w-full mb-4 sm:w-1/2 xl:w-1/4 sm:px-4">
 
-            <Link href={`/${url}`}>
+            <Link href={`/${url}`} scroll={false}>
 
                 <a className="block p-6 transition-all duration-200 bg-white shadow-lg rounded-2xl md:p-8 hover:shadow-xl">
                     <div className="bg-green rounded-t-2xl">

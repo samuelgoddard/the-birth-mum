@@ -49,7 +49,7 @@ export default function Courses({ subscription }) {
 
                 <div className="relative z-10 bg-white rounded-xl">
 
-                  <Tabs selectedTabClassName="bg-white text-orange-dark">
+                  <Tabs selectedTabClassName="rounded-t bg-white text-orange-dark">
                     <TabList className="flex flex-wrap bg-gray-100">
                       {allCourses.map((course, i) => {
                         return(

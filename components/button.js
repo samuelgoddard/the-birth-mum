@@ -4,7 +4,7 @@ import cn from 'classnames'
 
 export default function Button({secondary, link, classes, children}) {
   return (
-    <Link href={link ? link : '#'}>
+    <Link href={link ? link : '#'} scroll={false}>
       <a
         type="button"
         className={

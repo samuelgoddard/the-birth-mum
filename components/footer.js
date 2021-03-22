@@ -7,7 +7,7 @@ export default function Footer() {
       <Container>
         <div className="flex flex-wrap mb-6 md:mb-8">
           <div className="w-1/2 mb-4 md:w-1/4 md:mb-0">
-            <Link href="/">
+            <Link href="/" scroll={false}>
               <a>
                 <img src="/logo.svg" alt="The Birth Mum Logo" className="w-20 md:w-24" />
               </a>
@@ -20,19 +20,19 @@ export default function Footer() {
           </div>
 
           <div className="w-1/2 mb-4 md:w-1/4 md:mb-0">
-            <Link href="/"><a aria-label="Navigate to Home" className="block mb-1 text-xs lg:mb-3 sm:mb-2 lg:text-base hover:underline focus:underline">Home</a></Link>
+            <Link href="/" scroll={false}><a aria-label="Navigate to Home" className="block mb-1 text-xs lg:mb-3 sm:mb-2 lg:text-base hover:underline focus:underline">Home</a></Link>
             
-            <Link href="/about"><a aria-label="Navigate to About" className="block mb-1 text-xs lg:mb-3 sm:mb-2 lg:text-base hover:underline focus:underline">About</a></Link>
+            <Link href="/about" scroll={false}><a aria-label="Navigate to About" className="block mb-1 text-xs lg:mb-3 sm:mb-2 lg:text-base hover:underline focus:underline">About</a></Link>
             
-            <Link href="/hypnobirthing"><a aria-label="Navigate to Hypnobirthing" className="block mb-1 text-xs lg:mb-3 sm:mb-2 lg:text-base hover:underline focus:underline">Hypnobirthing</a></Link>
+            <Link href="/hypnobirthing" scroll={false}><a aria-label="Navigate to Hypnobirthing" className="block mb-1 text-xs lg:mb-3 sm:mb-2 lg:text-base hover:underline focus:underline">Hypnobirthing</a></Link>
           </div>
 
           <div className="w-1/2 mb-4 md:w-1/4 md:mb-0">
-            <Link href="/courses"><a aria-label="Navigate to Courses &amp; Booking" className="block mb-1 text-xs lg:mb-3 sm:mb-2 lg:text-base hover:underline focus:underline">Courses &amp; Booking</a></Link>
+            <Link href="/courses" scroll={false}><a aria-label="Navigate to Courses &amp; Booking" className="block mb-1 text-xs lg:mb-3 sm:mb-2 lg:text-base hover:underline focus:underline">Courses &amp; Booking</a></Link>
             
-            <Link href="/blog"><a aria-label="Navigate to The Blog" className="block mb-1 text-xs lg:mb-3 sm:mb-2 lg:text-base hover:underline focus:underline">The Blog</a></Link>
+            <Link href="/blog" scroll={false}><a aria-label="Navigate to The Blog" className="block mb-1 text-xs lg:mb-3 sm:mb-2 lg:text-base hover:underline focus:underline">The Blog</a></Link>
 
-            <Link href="/contact"><a aria-label="Navigate to Contact" className="block mb-1 text-xs lg:mb-3 sm:mb-2 lg:text-base hover:underline focus:underline">Get In Touch</a></Link>
+            <Link href="/contact" scroll={false}><a aria-label="Navigate to Contact" className="block mb-1 text-xs lg:mb-3 sm:mb-2 lg:text-base hover:underline focus:underline">Get In Touch</a></Link>
           </div>
         </div>
 

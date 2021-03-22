@@ -50,7 +50,7 @@ export default function mobileMenu({navItems}) {
                     Object.values(navItems).map((item, i) => {
                         return(
                         <motion.div className="mb-6 text-center" key={i} variants={listItem}>
-                            <Link href={item.href}>
+                            <Link href={item.href} scroll={false}>
                             <a aria-label={`Go to ${item.label}`} onClick={() => setOpen(!open)} className={`tracking-widest uppercase navItem ${currentPath === item.href ? 'text-orange-dark navActive' : ''}`}>
                                 {item.label}
                             </a>

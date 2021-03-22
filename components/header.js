@@ -46,7 +46,7 @@ export default function Header() {
         <div className="relative z-10 flex flex-wrap items-center justify-between">
           
           <div className="w-24 lg:w-48">
-            <Link href="/">
+            <Link href="/" scroll={false}>
               <a>
                 <img src="/logo.svg" alt="The Birth Mum Logo" className="w-full" />
               </a>
@@ -58,7 +58,7 @@ export default function Header() {
             {
               Object.values(navItems).map((item, i) => {
                 return(
-                  <Link key={i} href={item.href}>
+                  <Link key={i} href={item.href} scroll={false}>
                     <a aria-label={`Go to ${item.label}`} className={`text-xs tracking-widest uppercase lg:text-sm md:mx-1 lg:mx-3 xl:mx-5 navItem ${currentPath === item.href ? 'text-orange-dark navActive' : ''}`}>
                       {item.label}
                     </a>

@@ -26,7 +26,7 @@ export default function Pagination({currentPage, postsPerPage, allPosts, pagedUr
                             {
                                 currentPage == 1 
                                 ? <div className="px-4 py-2 text-white rounded-lg bg-orange">{page}</div>
-                                : <Link className="px-4 py-2 bg-white text-orange" href={`/${pagedUrlBase}/`}><a>{page}</a></Link>
+                                : <Link scroll={false} className="px-4 py-2 bg-white text-orange" href={`/${pagedUrlBase}/`}><a>{page}</a></Link>
                             }                            
                         </li>
                     }
@@ -35,7 +35,7 @@ export default function Pagination({currentPage, postsPerPage, allPosts, pagedUr
                             {
                                 currentPage == page
                                 ? <div className="px-4 py-2 text-white rounded-lg bg-orange">{page}</div>
-                                : <Link className="px-4 py-2 bg-white text-orange" href={`/${pagedUrlBase}/page/${page}`}><a>{page}</a></Link>
+                                : <Link scroll={false} className="px-4 py-2 bg-white text-orange" href={`/${pagedUrlBase}/page/${page}`}><a>{page}</a></Link>
                             }
                         </li>
                     }
