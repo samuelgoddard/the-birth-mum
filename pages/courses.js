@@ -79,7 +79,8 @@ export default function Courses({ subscription }) {
                                 
                                 <div className="flex flex-wrap mt-6">
                                   <span className="flex items-center px-4 py-2 mr-4 rounded-full md:mr-0 md:w-full md:justify-center md:mb-4 bg-peach xl:w-auto xl:mb-0 xl:mr-4">{course.price}</span>
-                                  <Button link="/contact" classes="text-center md:w-full justify-center xl:w-auto">Get in touch</Button>
+                                  <Button external link="https://buytickets.at/thebirthmum" classes="text-center md:w-full justify-center xl:w-auto">Book now</Button>
+                                  
                                 </div>
 
                               </div>
