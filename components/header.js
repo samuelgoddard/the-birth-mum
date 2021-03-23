@@ -22,10 +22,10 @@ export default function Header() {
 
         <div className="relative z-10 flex flex-wrap items-center justify-between">
           
-          <div className="w-24 lg:w-48">
+          <div className="">
             <Link href="/" scroll={false}>
               <a>
-                <img src="/logo.svg" alt="The Birth Mum Logo" className="w-full" />
+                <img src="/logo.svg" alt="The Birth Mum Logo" className="w-24 lg:w-48 xl:w-auto" />
               </a>
             </Link>
           </div>
