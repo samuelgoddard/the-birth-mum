@@ -12,7 +12,7 @@ export default function Buckets({}) {
                 id="calendar"
                 icon="calendar"
                 title="Interested?"
-                text="Check out our course options and upcoming dates!"
+                text="With an option for everyone, check out our different courses."
                 linkTarget="courses"
                 linkLabel="View Dates"
                 />
@@ -31,8 +31,9 @@ export default function Buckets({}) {
                 icon="book"
                 title="Book!"
                 text="Book a TBM course and prepare for a positive birth."
-                linkTarget="courses"
-                linkLabel="View courses"
+                linkTarget="https://www.tickettailor.com/events/thebirthmum"
+                linkLabel="Book Now"
+                external
                 />
                 
             </div>
