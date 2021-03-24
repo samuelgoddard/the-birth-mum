@@ -9,7 +9,7 @@ export const navItems = {
     },
     Hypnobirthing: {
       href: '/hypnobirthing',
-      label: 'Hynobirthing'
+      label: 'Hypnobirthing'
     },
     Courses: {
       href: '/courses',
@@ -17,6 +17,6 @@ export const navItems = {
     },
     Blog: {
       href: '/blog',
-      label: 'The Blog'
+      label: 'TBM Hub'
     }
   }

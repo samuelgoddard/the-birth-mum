@@ -16,7 +16,7 @@ export default function Footer() {
 
           <div className="w-1/2 mb-4 md:w-1/4 md:mb-0">
             <a href="tel:08000000000" className="block mb-1 text-xs sm:mb-2 lg:mb-3 lg:text-base hover:underline focus:underline text-green-light">0800 000 000</a>
-            <a href="mailto:info@gmail.com" className="block mb-1 text-xs sm:mb-2 lg:mb-3 lg:text-base hover:underline focus:underline text-green-light">info@gmail.com</a>
+            <a href="mailto:hello@thebirthmum.co.uk" className="block mb-1 text-xs sm:mb-2 lg:mb-3 lg:text-base hover:underline focus:underline text-green-light">hello@thebirthmum.co.uk</a>
           </div>
 
           <div className="w-1/2 mb-4 md:w-1/4 md:mb-0">
