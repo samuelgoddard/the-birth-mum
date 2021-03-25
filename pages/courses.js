@@ -12,6 +12,8 @@ import { motion } from "framer-motion"
 import { fade } from "../helpers/transitionHelper"
 import Container from "../components/container";
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
+import Date from "../components/date";
+import { parseISO, format } from 'date-fns'
 
 export default function Courses({ subscription }) {  
 
@@ -86,9 +88,27 @@ export default function Courses({ subscription }) {
 
                                   {!course.ticketsAvailable &&
                                     <Button link="/contact" classes="text-center md:w-full justify-center xl:w-auto">Get in touch</Button>
-                                  }
-                                  
+                                  }                                  
                                 </div>
+
+                                {Object.entries(course.availableDates).length > 0 &&
+                                  <ul className="mt-6">
+                                      <li className="font-display">Available dates:</li>
+                                      {course.availableDates.map((date, i) => {
+                                        return( 
+                                          <li key={i} className="flex items-center justify-end py-4 text-right border-b border-gray-100">
+                                            <img className="relative inline-block h-4 mr-2" src="icons/icon-calendar.svg" alt="" />
+                                            {/* <Date dateString={date.dateTime} /> */}
+                                            <time className="text-sm" dateTime={date.dateTime}>
+                                              <span>{format(parseISO(date.dateTime), 'LLLL	d, yyyy')}</span>
+                                              <span className="text-orange"> &bull; {format(parseISO(date.dateTime), 'K:mm bbb')}</span>
+                                            </time>    
+                                          </li>
+                                        )
+                                      })
+                                      }
+                                  </ul>
+                                }
 
                               </div>
                             </div>
@@ -153,6 +173,9 @@ export async function getStaticProps() {
           content
           ticketsAvailable
           ticketBookingLinkUrl
+          availableDates {
+            dateTime
+          }
         }
       }
 
