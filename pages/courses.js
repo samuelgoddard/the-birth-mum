@@ -48,6 +48,33 @@ export default function Courses({ subscription }) {
             <div className="relative">
               
               <Container>
+                  <div className="relative z-10 mb-8 2xl:mb-32">
+
+                      <div className="flex flex-wrap items-center p-4 bg-white shadow-lg rounded-2xl 2xl:p-8">
+                          
+                          <p className="w-full p-4 text-4xl leading-tight md:text-5xl xl:text-right font-display xl:w-1/4 2xl:text-6xl 2xl:leading-tight">{coursesBooking.tasterHeading}</p>
+
+                          <div className="flex flex-wrap items-start justify-center w-full p-4 xl:w-2/4 xl:px-16">
+                            <div className="opacity-75 xl:w-11/12 content" dangerouslySetInnerHTML={{__html: coursesBooking.tasterIntro }} />
+                          </div>
+
+                          <div className="flex justify-center p-4 xl:w-1/4">
+                            <Button external link={coursesBooking.tasterBookingUrl} classes="sm:ml-4 mb-0">Book your spot today!</Button>
+                          </div>
+                          
+                      </div>
+
+                  </div>              
+
+              </Container>
+              
+            </div>
+
+
+
+            <div className="relative">
+              
+              <Container>
 
                 <div className="relative z-10 bg-white rounded-xl">
 
@@ -166,6 +193,9 @@ export async function getStaticProps() {
               ...responsiveImageFragment
             }
           }
+          tasterHeading
+          tasterIntro
+          tasterBookingUrl
         }
         allCourses: allCourses {
           title

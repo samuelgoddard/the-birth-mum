@@ -82,7 +82,7 @@ export default function Index({ subscription }) {
 
             <Values values={global.values} blob />
 
-            <AboutExcerpt />
+            <AboutExcerpt heading={global.hypnobirthingHeading} intro={global.hypnobirthingIntro} />
             
             <Container>
               <div className="flex flex-wrap mb-20 md:my-32">
@@ -152,6 +152,8 @@ export async function getStaticProps() {
             }
             cardUrl
           }
+          hypnobirthingHeading
+          hypnobirthingIntro
         }
       }
       ${metaTagsFragment}

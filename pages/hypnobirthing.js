@@ -44,7 +44,7 @@ export default function Hypnobirthing({ subscription }) {
 
             <Values values={global.values} />
 
-            <AboutExcerpt />
+            <AboutExcerpt heading={global.hypnobirthingHeading} intro={global.hypnobirthingIntro} />
 
             <Buckets />
 
@@ -107,6 +107,8 @@ export async function getStaticProps() {
             }
             cardUrl
           }
+          hypnobirthingHeading
+          hypnobirthingIntro
         }
       }
 

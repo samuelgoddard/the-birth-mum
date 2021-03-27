@@ -39,7 +39,7 @@ export default function About({ subscription }) {
 
             <Values values={global.values} blob />
 
-            <AboutExcerpt />
+            <AboutExcerpt heading={global.hypnobirthingHeading} intro={global.hypnobirthingIntro} />
 
             <Buckets />
 
@@ -102,6 +102,8 @@ export async function getStaticProps() {
             }
             cardUrl
           }
+          hypnobirthingHeading
+          hypnobirthingIntro
         }
       }
 

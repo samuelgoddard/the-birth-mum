@@ -37,7 +37,7 @@ export default function Contact({ subscription }) {
 
             <Values values={global.values} blob />
 
-            <AboutExcerpt />
+            <AboutExcerpt heading={global.hypnobirthingHeading} intro={global.hypnobirthingIntro} />
 
             <Buckets />
 
@@ -72,6 +72,8 @@ export async function getStaticProps() {
             heading
             text
           }
+          hypnobirthingHeading
+          hypnobirthingIntro
         }
       }
 

@@ -11,7 +11,7 @@ export default function Values({ values, blob }) {
 
                     <div className="flex flex-wrap items-center p-4 bg-white shadow-lg rounded-2xl 2xl:p-8">
                         
-                        <p className="w-full p-4 text-4xl leading-tight md:text-5xl xl:text-right font-display xl:w-1/4 2xl:text-6xl 2xl:leading-tight">The birth Mum values.</p>
+                        <p className="w-full p-4 text-4xl leading-tight md:text-5xl xl:text-right font-display xl:w-1/4 2xl:text-6xl 2xl:leading-tight">The Birth Mum values.</p>
 
                         <div className="flex flex-wrap items-start w-full xl:w-3/4">
                         {values.map((value, i) => {
