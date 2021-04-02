@@ -5,7 +5,7 @@ import { metaTagsFragment, responsiveImageFragment } from "../lib/fragments";
 import Layout from "../components/layout";
 import Hero from "../components/hero";
 import Values from "../components/values";
-import Buckets from "../components/buckets";
+import Testimonials from "../components/testimonials";
 import AboutExcerpt from "../components/about-excerpt";
 import Footer from '../components/footer'
 import { motion } from "framer-motion"
@@ -39,7 +39,7 @@ export default function Contact({ subscription }) {
 
             <AboutExcerpt heading={global.hypnobirthingHeading} intro={global.hypnobirthingIntro} />
 
-            <Buckets />
+            <Testimonials reviews={global.testimonials} />
 
             <Footer />
 
@@ -71,6 +71,10 @@ export async function getStaticProps() {
           values {
             heading
             text
+          }
+          testimonials {
+            name
+            testimonial
           }
           hypnobirthingHeading
           hypnobirthingIntro

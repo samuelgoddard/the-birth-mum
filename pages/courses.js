@@ -104,7 +104,7 @@ export default function Courses({ subscription }) {
                             <div className="flex flex-col w-full p-4 md:items-end md:text-right md:w-1/3 md:p-12 xl:p-16">
                               <div className="flex flex-col md:items-end">
                                 <h2 className="mb-4 leading-tight 2xl:text-5xl">{course.title}</h2>
-                                <p className="tracking-widest uppercase xl:w-9/12">Group hypnobirthing classes in Nottingham</p>
+                                <p className="tracking-widest uppercase xl:w-9/12">{course.subtitle}</p>
                                 
                                 <div className="flex flex-wrap mt-6">
                                   <span className="flex items-center px-4 py-2 mr-4 rounded-full md:mr-0 md:w-full md:justify-center md:mb-4 bg-peach xl:w-auto xl:mb-0 xl:mr-4">{course.price}</span>
@@ -123,7 +123,7 @@ export default function Courses({ subscription }) {
                                       <li className="font-display">Available dates:</li>
                                       {course.availableDates.map((date, i) => {
                                         return( 
-                                          <li key={i} className="flex items-center justify-end py-4 text-right border-b border-gray-100">
+                                          <li key={i} className="flex items-center py-4 text-right border-b border-gray-100 lg:justify-end">
                                             <img className="relative inline-block h-4 mr-2" src="icons/icon-calendar.svg" alt="" />
                                             {/* <Date dateString={date.dateTime} /> */}
                                             <time className="text-sm" dateTime={date.dateTime}>
@@ -199,6 +199,7 @@ export async function getStaticProps() {
         }
         allCourses: allCourses {
           title
+          subtitle
           price
           content
           ticketsAvailable

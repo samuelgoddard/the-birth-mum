@@ -1,13 +1,14 @@
-import Head from "next/head";
-import { request } from "../lib/datocms";
-import { metaTagsFragment, responsiveImageFragment } from "../lib/fragments";
-import { renderMetaTags, useQuerySubscription } from "react-datocms";
-import Layout from "../components/layout";
-import Hero from "../components/hero";
-import Buckets from "../components/buckets";
+import Head from "next/head"
+import { request } from "../lib/datocms"
+import { metaTagsFragment, responsiveImageFragment } from "../lib/fragments"
+import { renderMetaTags, useQuerySubscription } from "react-datocms"
+import Layout from "../components/layout"
+import Hero from "../components/hero"
+import Buckets from "../components/buckets"
 import Values from '../components/values'
 import Container from '../components/container'
-import AboutExcerpt from "../components/about-excerpt";
+import AboutExcerpt from "../components/about-excerpt"
+import Testimonials from "../components/testimonials"
 import Footer from '../components/footer'
 import Blob from '../components/blob'
 import { Image } from 'react-datocms'
@@ -98,6 +99,10 @@ export default function Index({ subscription }) {
                 })}
               </div>
             </Container>
+            
+            {global.testimonials.length > 0 && 
+              <Testimonials reviews={global.testimonials} />
+            }
 
             <Footer />
 
@@ -151,6 +156,10 @@ export async function getStaticProps() {
               }
             }
             cardUrl
+          }
+          testimonials {
+            name
+            testimonial
           }
           hypnobirthingHeading
           hypnobirthingIntro
