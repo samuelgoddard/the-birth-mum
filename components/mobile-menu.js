@@ -29,7 +29,7 @@ export default function mobileMenu({navItems}) {
 
     return (
         <>
-            <button open={open} onClick={() => setOpen(!open)} className={`btn-mobile-menu md:hidden ${open ? 'open' : ''}`}>
+            <button aria-label="Open Menu" open={open} onClick={() => setOpen(!open)} className={`btn-mobile-menu md:hidden ${open ? 'open' : ''}`}>
                 <span />
                 <span />
                 <span />

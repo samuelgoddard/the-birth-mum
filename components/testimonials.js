@@ -9,7 +9,7 @@ export default function testimonials ({ reviews }) {
 
                 {reviews.map((review, i) => {
                     return(
-                    <div className="w-full p-4 mt-12 md:w-1/3 md:p-6 lg:px-12 md:mt-0">
+                    <div className="w-full p-4 mt-12 md:w-1/3 md:p-6 lg:px-12 md:mt-0" key={i}>
 
                         <div className="relative flex items-center justify-center">
                             <img className="absolute z-0" src="bucket-icon-bg.svg" alt="" />
