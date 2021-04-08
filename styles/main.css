@@ -120,7 +120,7 @@ h2 {
 
 /* Buckets */
 .bucket a {
-  @apply relative transition-all duration-200;
+  @apply relative transition-all duration-200 appearance-none;
 
   &:after {
     content: '';
