@@ -28,6 +28,7 @@ export default function Bucket({id, icon, title, text, linkTarget, linkLabel, ex
                     href={linkTarget}
                     type="button"
                     target="_blank"
+                    rel="noopener noreferrer"
                     className="inline-flex items-center justify-center text-lg tracking-widest uppercase text-green-light"
                     >
                     {linkLabel}
