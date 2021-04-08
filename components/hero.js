@@ -41,8 +41,6 @@ export default function Hero({ subHeading, heading, text, image, buttons, thin, 
                 <Image
                   data={{...image.responsiveImage, alt: `${heading}` }}
                   className="w-full rounded-lg"
-                  width="1200"
-                  height="850"
                 />
               </div>
             </div>
