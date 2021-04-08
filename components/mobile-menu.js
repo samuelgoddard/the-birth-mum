@@ -65,7 +65,8 @@ export default function mobileMenu({navItems}) {
                     </motion.div>
                     
                     <motion.div className="text-center" variants={listItem}>
-                    <a className="transition-all duration-200 text-green-light hover:text-green" variants={listItem} href="tel:070000000">Tel: <span className="text-orange">070000000</span></a>
+                    <a className="transition-all duration-200 text-green-light hover:text-green" variants={listItem} href="tel:07723039623">Tel: <span className="text-orange">07723 039623</span></a>
+                    
                     </motion.div>
 
                 </motion.div>

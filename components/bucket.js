@@ -10,7 +10,7 @@ export default function Bucket({id, icon, title, text, linkTarget, linkLabel, ex
                 <img className="relative h-16" src={`icons/icon-${icon}.svg`} alt="" />
             </div>
 
-            <div className="relative z-10 mt-20 lg:px-8 xl:px-20 ">
+            <div className="relative z-10 mt-20 lg:px-8 xl:px-10 2xl:px-20 ">
                 <p className="text-lg tracking-widest uppercase">{title}</p>
                 <p className="my-3 opacity-75">{text}</p>
                 
